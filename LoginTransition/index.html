@@ -7,14 +7,20 @@
     <link rel="stylesheet" href="Assets/Style/index.css">
 </head>
 <body>
+    <div id="container_btn_theme">
+        <div id="container_icon_theme">
+            <img src="/Assets/Imgs/night-mode.png" alt="Icon Theme" id="icon_theme">
+        </div>
+    </div>
+
     <main>
         <div id="background_signIn" class="bakground_sections"></div>
         <section id="container_signIn">
             <h1>Sign in</h1>
             <p>Lorem ipsum dolor sit amet</p>
             <form>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
                 <p>Forget your password?</p>
                 <button>Sign In</button>
             </form>
@@ -25,13 +31,13 @@
                 <section id="text_signIn">
                     <h1>Hello, Friend!</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eu tempora dolorum voluptatem ratione!</p>
-                    <button onclick="changeModel()">Create Account</button>
+                    <button onclick="changeModel()">Sign in</button>
                 </section>
 
                 <section id="text_createAccount">
                     <h1>Welcome Back!</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eu tempora dolorum voluptatem ratione!</p>
-                    <button onclick="changeModel()">Sign in</button>
+                    <button onclick="changeModel()">Create Account</button>
                 </section>
             </div>
         </div>
@@ -41,9 +47,9 @@
             <h1>Create Account</h1>
             <p>Lorem ipsum dolor sit amet</p>
             <form>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
                 <p>Forget your password?</p>
                 <button>Create Account</button>
             </form>
