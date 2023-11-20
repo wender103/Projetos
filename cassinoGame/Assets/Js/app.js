@@ -91,9 +91,6 @@ function colocarNaTela(limpar = false) {
     }
 }
 
-const audioFundo = new Audio('./Assets/Audios/Caça-níqueis de som de jogo multimídia [TubeRipper.com].m4a');
-audioFundo.loop = true; // Repete continuamente
-audioFundo.volume = 0.5; // Ajuste o volume conforme necessário
 function scrollAleatorio() {
     // Áudio para tocar enquanto as divs estão rolando
 
@@ -129,7 +126,7 @@ function tocarAudioChegada() {
         let c3 = arraysEmbaralhados[2][arraysEmbaralhados[0].length - 1]
 
         if(c1 == c2 && c1 == c3) {
-            somarPontos(10000)
+            somarPontos(5000)
         } else if(c1 == c2 || c1 == c3 || c2 == c3) {
             somarPontos(100)
         } else {
@@ -145,7 +142,7 @@ function somarPontos(pontos) {
     infosGame.coins += pontos
     atulizarInterface()
 
-    if(totalPontos == 100000) {
+    if(totalPontos == 10000) {
         ganhouJogo()
     }
 }
