@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cassino Game</title>
+    <link rel="stylesheet" href="Assets/Styles/index.css">
+</head>
+<body>
+    <header>
+        <div>
+            <p><img src="Assets/Imgs/coin.png"> <span id="total_coins">0</span></p>
+            <p><img src="Assets/Imgs/ticket.png"> <span id="total_tickets">5</span></p>
+        </div>
+
+        <button onclick="abrirComprar()">Comprar tickets</button>
+    </header>
+
+    <div id="container_menu_inicio">
+        <div id="menu_inicio">
+            <p>Faça 100.000 mil pontos para ganhar o jogo, valendo uma coca!</p>
+            <p>Use os seus tickets para jogar, a cada jogada você ganhará moedas para comprar mais tickets e continuar na jogada.</p>
+            <button onclick="startGame()">Começar</button>
+        </div>
+    </div>
+
+    <div id="container_comprar_tickets">
+        <div id="comprar_tickets">
+            <p>Ficar sem tickets não é bom... Valendo uma coca em ;-;</p>
+
+            <div id="contaier_explic">
+                <div><span>50</span> <img src="Assets/Imgs/coin.png"></div>
+                <span>=</span>
+                <div><span>1</span> <img src="Assets/Imgs/ticket.png"></div>
+            </div>
+
+            <div id="container_buttons">
+                <button onclick="Comprar()">Comprar</button>
+                <button onclick="fehcarComprar()">Fehcar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="container_vitoria">
+        <h1>Você Ganhou</h1>
+        <p>Pegue aqui a sua coca</p>
+        <img src="Assets/Imgs/coca-600-ml.jpg" alt="">
+
+        <button onclick="playAgain()">Jogar novamente</button>
+    </div>
+
+    <section id="container_niquel_machine">
+        <div id="top_part"></div>
+
+        <div id="container_lever">
+            <div id="lever1">
+                <div id="lever_cable" onclick="checarTickets()">
+                    <div class="lever_cable_shadow"></div>
+                    <div class="lever_cable_shadow"></div>
+
+                    <div id="boll">
+                        <div id="boll1"></div>
+                        <div id="boll2"></div>
+                        <div id="boll3"></div>
+                    </div>
+                </div>
+                <div id="lever_backgound"></div>
+                <div id="lever2"></div>
+                <div id="lever_background_shadow"></div>
+            </div>
+        </div>
+
+        <div id="midle">
+            <div id="red_part">
+                <div id="top_red_part"></div>
+
+                <div id="bottom_red_part"></div>
+            </div>
+
+            <div id="yellow_part">
+                <div id="header">
+                    <div id="container_header">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+
+                        <h1>CASSINO</h1>
+                    </div>
+                </div>
+                
+                <div id="top_yellow_part"></div>
+
+                <div class="light_yellow" id="light_yellow1">
+                    <div class="light"></div>
+                    <div class="light"></div>
+                </div>
+
+                <div class="light_yellow" id="light_yellow2">
+                    <div class="light"></div>
+                    <div class="light"></div>
+                </div>
+
+                <div id="container_screen">
+                    <div id="screen_top_part"></div>
+
+                    <div id="screen">
+                        <div class="line_screen">
+                            <img src="Assets/Imgs/limao.png">
+                            <img src="Assets/Imgs/laranja.png">
+                            <img src="Assets/Imgs/cereja.png">
+                            
+                        </div>
+                        <div class="line_screen">
+                            <img src="Assets/Imgs/limao.png">
+                            <img src="Assets/Imgs/laranja.png">
+                            <img src="Assets/Imgs/cereja.png">
+                        </div>
+                        <div class="line_screen">   
+                            <img src="Assets/Imgs/limao.png">
+                            <img src="Assets/Imgs/laranja.png">
+                            <img src="Assets/Imgs/cereja.png">
+                        </div>
+                    </div>
+
+                    <div id="screen_bottom_part"></div>
+                </div>
+
+                <div id="container_points">
+                    <div id="container_text_points">
+                        <span id="point_0">0</span>
+                    </div>
+                </div>
+
+                <div id="bottom_yellow_part"></div>
+            </div>
+        </div>
+
+        <div id="bottom_part"></div>
+    </section>
+
+    <script src="./Assets/Js/app.js"></script>
+</body>
+</html>
