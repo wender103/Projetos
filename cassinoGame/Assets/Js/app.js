@@ -3,7 +3,7 @@ function startGame() {
 }
 
 let infosGame = {
-    tickets: 5,
+    tickets: 1,
     coins: 0
 }
 
@@ -61,8 +61,14 @@ function checarTickets() {
         infosGame.tickets--
         atulizarInterface()
         colocarNaTela(true)
-    } else {
+    } else if (infosGame.tickets <= 0 && infosGame.coins >= 50) {
         alert('Você não tem mais tickets!')
+    } else {
+        if(confirm('Perdeu a coca, vai eu dexo você tendar dnv')) {
+            location.reload()
+        } else {
+            location.reload()
+        }
     }
 }
 
@@ -130,7 +136,7 @@ function tocarAudioChegada() {
         } else if(c1 == c2 || c1 == c3 || c2 == c3) {
             somarPontos(100)
         } else {
-            somarPontos(10)
+            somarPontos(-50)
         }
     }
 }
@@ -138,12 +144,26 @@ function tocarAudioChegada() {
 let totalPontos = 0
 function somarPontos(pontos) {
     totalPontos += pontos
-    document.getElementById('point_0').innerText = totalPontos.toLocaleString('pt-BR')
-    infosGame.coins += pontos
+
+    if(totalPontos < 50 && pontos < 0) {
+        document.getElementById('point_0').innerText = 0
+
+    } else {
+        document.getElementById('point_0').innerText = totalPontos.toLocaleString('pt-BR')
+        infosGame.coins += pontos
+    }
     atulizarInterface()
 
     if(totalPontos == 10000) {
         ganhouJogo()
+    }
+
+    if (infosGame.tickets <= 0 && infosGame.coins <= 50) { 
+        if(confirm('Perdeu a coca, vai eu dexo você tendar dnv')) {
+            location.reload()
+        } else {
+            location.reload()
+        }
     }
 }
 
