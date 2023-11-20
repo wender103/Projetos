@@ -3,7 +3,7 @@ function startGame() {
 }
 
 let infosGame = {
-    tickets: 1,
+    tickets: 5,
     coins: 0
 }
 
@@ -72,8 +72,13 @@ function checarTickets() {
     }
 }
 
+let checarFimColocarNaTela = false
 function colocarNaTela(limpar = false) {
-    if (limpar) {
+    if (limpar && checarFimColocarNaTela == false) {
+        checarFimColocarNaTela = true
+
+
+        console.log('Dentro da função');
         document.querySelectorAll('.line_screen').forEach(function (div) {
             div.innerHTML = `<img src="Assets/Imgs/${arraysEmbaralhados[0][arraysEmbaralhados[0].length - 1]}.png">`;
             div.scrollTop = 0;
@@ -82,12 +87,12 @@ function colocarNaTela(limpar = false) {
         contador = 0;
 
         arraysEmbaralhados = embaralharArrays(arr1);
-        colocarNaTela();
-        colocarNaTela();
-        colocarNaTela();
+        colocarNaTela(false)
+        colocarNaTela(false)
+        colocarNaTela(false)
         scrollAleatorio();
 
-    } else {
+    } else if(!limpar && checarFimColocarNaTela == true) {
 
         for (let i = 0; i < arraysEmbaralhados[contador].length; i++) {
             document.getElementsByClassName('line_screen')[contador].innerHTML += `<img src="Assets/Imgs/${arraysEmbaralhados[contador][i]}.png">`;
@@ -117,7 +122,6 @@ function scrollAleatorio() {
     });
 }
 
-// Áudio para tocar quando cada div chega ao final do scroll
 let checarFim = 0
 function tocarAudioChegada() {
     const audioChegada = new Audio('./Assets/Audios/Efeito sonoro - dinheiro [TubeRipper.com].m4a');
@@ -127,6 +131,7 @@ function tocarAudioChegada() {
 
     if(checarFim == 3) {
         checarFim = 0
+        checarFimColocarNaTela = false
         let c1 = arraysEmbaralhados[0][arraysEmbaralhados[0].length - 1]
         let c2 = arraysEmbaralhados[1][arraysEmbaralhados[0].length - 1]
         let c3 = arraysEmbaralhados[2][arraysEmbaralhados[0].length - 1]
