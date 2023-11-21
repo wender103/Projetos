@@ -153,15 +153,23 @@ function somarPontos(pontos) {
     totalPontos += pontos
 
     if(totalPontos < 50 && pontos < 0) {
+        totalPontos = 0
         document.getElementById('point_0').innerText = 0
-
+        
     } else {
         document.getElementById('point_0').innerText = totalPontos.toLocaleString('pt-BR')
+    }
+
+    if(infosGame.coins < (pontos * -1)) {
+        infosGame.coins = 0
+    } else if(pontos >= 500) {
+        infosGame.coins += 500
+    } else {
         infosGame.coins += pontos
     }
     atulizarInterface()
 
-    if(totalPontos == 10000) {
+    if(totalPontos >= 10000) {
         ganhouJogo()
     }
 
