@@ -124,9 +124,11 @@ function scrollAleatorio() {
 
 let checarFim = 0
 function tocarAudioChegada() {
-    const audioChegada = new Audio('./Assets/Audios/Efeito sonoro - dinheiro [TubeRipper.com].m4a');
-    audioChegada.volume = 1; // Ajuste o volume conforme necessário
-    audioChegada.play();
+    try {
+        const audioChegada = new Audio('./Assets/Audios/Efeito sonoro - dinheiro [TubeRipper.com].m4a');
+        audioChegada.volume = 1; // Ajuste o volume conforme necessário
+        audioChegada.play();
+    } catch()
     checarFim++
 
     if(checarFim == 3) {
