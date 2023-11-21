@@ -128,7 +128,7 @@ function tocarAudioChegada() {
         const audioChegada = new Audio('./Assets/Audios/Efeito sonoro - dinheiro [TubeRipper.com].m4a');
         audioChegada.volume = 1; // Ajuste o volume conforme necessário
         audioChegada.play();
-    } catch()
+    } catch{}
     checarFim++
 
     if(checarFim == 3) {
