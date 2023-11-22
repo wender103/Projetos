@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova do Enem</title>
+    <link rel="stylesheet" href="Assets/Styles/index.css">
+    <link rel="shortcut icon" href="https://d3awytnmmfk53d.cloudfront.net/gabarito-enem-client/_build/a9fb535b2a94bd001f2876a6433f835e63337c6f/static/images/favicon/favicon.png?" type="image/x-icon">
+</head>
+<body>
+    <!-- <div class="container_error"><span class="header_mensage">Subject: Urgent Security Alert - Your PC has been Compromised</span><button class="x">x</button><div class="container_main_error"><div class="conatiner_text_error"><img src="Assets/Imgs/windows-error-icon-24.jpg"><p>We regret to inform you that our security systems have detected unauthorized access to your PC. Your system has been compromised by a potential hacker. Immediate action is required to safeguard your personal data and prevent further damage. Please run a full scan using Windows Defender to identify and remove any malicious entities.</p></div><div class="container_button"><button>OK</button></div></div></div> -->
+
+    <script>
+        function randomNumber(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        function criarDivs() {
+            const containerError = document.createElement('div');
+            containerError.className = 'container_error';
+
+            const maxWidth = window.innerWidth - 500;
+            const maxHeight = window.innerHeight - 0;
+
+            containerError.style.top = `${randomNumber(maxHeight)}px`;
+            containerError.style.left = `${randomNumber(maxWidth)}px`;
+
+            containerError.innerHTML = `<span class="header_mensage">Subject: Urgent Security Alert - Your PC has been Compromised</span><button class="x">x</button><div class="container_main_error"><div class="conatiner_text_error"><img src="Assets/Imgs/windows-error-icon-24.jpg"><p>We regret to inform you that our security systems have detected unauthorized access to your PC. Your system has been compromised by a potential hacker. Immediate action is required to safeguard your personal data and prevent further damage. Please run a full scan using Windows Defender to identify and remove any malicious entities.</p></div><div class="container_button"><button>OK</button></div></div>`;
+
+            document.querySelector('body').appendChild(containerError);
+
+            // Adiciona e reproduz o áudio
+            const audio = new Audio('./Assets/Audios/error.mp3');
+            audio.play()
+        }
+
+        let intervalo = 700;
+
+        function criarDivsComIntervalo() {
+            criarDivs();
+            intervalo = Math.max(0, intervalo - 100); // Garante que o intervalo não seja menor que 100
+            setTimeout(criarDivsComIntervalo, intervalo);
+        }
+
+        document.addEventListener('click', () => {
+            criarDivsComIntervalo()
+        })
+    </script>
+</body>
+</html>
