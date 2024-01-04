@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --pale_green: #EBF3E9;
+  --teal: #3AB795;
+  --pale_mint: #E1ECE1;
+  --pale_greenish_blue: #AED1AC;
+  --pale_greenish_gray: #D3E8D2;
+  --dark_gray: #424941;
+  --ivory_white: #FBFDF6;
+  --darkness: rgba(0, 0, 0, 0.342);
+  --darkness_ligth: rgba(0, 0, 0, 0.103);
+  --darkness_dark: rgba(0, 0, 0, 0.50);
+  --lime-green: #49AD09;
+  --medium-lime-green: #61C554;
+  --light-grayish-blue: #E8ECEF;
+  --light-gray: #F9F9F9;
+  --light-blue-gray: #F1F4F7;
+  --gray: #bebebe;
+  --dark-pink: #CC3169;
+  --font_montserrat: "Montserrat", sans-serif;
+  --font_inter: "Inter", sans-serif;
+  --font_roboto: "Roboto", sans-serif;
+  --font_nunito: "Nunito", sans-serif;
+}
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --background1: #FF574D;
+  --background2: #FF556C;
+  --inputColor: #F2EEF4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font_roboto);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--pale_greenish_blue);
+  background-image: url("../imgs/cover.png");
+  color: var(--black);
+  transition: all 0.4s ease-in-out;
+}
+body div#container_btn_theme {
+  width: 90px;
+  height: 30px;
+  background-color: var(--white);
+  border-radius: 10px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  border: 1px solid var(--pale_greenish_blue);
+  transition: all 0.4s ease-in-out;
+}
+body div#container_btn_theme div#container_icon_theme {
+  width: 30px;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  transition: left 0.6s ease-in-out;
+  left: 0;
+}
+body div#container_btn_theme div#container_icon_theme.Dark_Active {
+  left: calc(100% - 30px);
+  animation: 0.6s animationBtn ease-in-out;
+}
+body div#container_btn_theme div#container_icon_theme.Light_Active {
+  animation: 0.6s animationBtn2 ease-in-out;
+}
+@keyframes animationBtn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animationBtn2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+body div#container_btn_theme div#container_icon_theme img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@keyframes identifier {}
+body main {
+  width: 95%;
+  max-width: 1000px;
+  height: 600px;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: -2px 10px 15px var(--darkness);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+body main div#background_orange {
+  width: 50%;
+  height: 100%;
+  background-color: var(--teal);
+  position: absolute;
+  transition: all 0.6s ease-in-out;
+  z-index: 3;
+  overflow: hidden;
+}
+body main div#background_orange.left {
+  left: 0;
+}
+body main div#background_orange.right {
+  left: 50%;
+}
+body main div#background_orange div#container_background_orange {
+  width: 200%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -100%;
+  transition: all 0.6s ease-in-out;
+}
+body main div#background_orange div#container_background_orange section {
+  width: 90%;
+  color: var(--white);
+  text-align: center;
+  background-color: transparent;
+  position: relative;
+}
+body main div#background_orange div#container_background_orange section button {
+  width: auto;
+  padding: 15px 20px;
+  color: var(--white);
+  background: transparent;
+  border: 1px solid var(--white);
+  cursor: pointer;
+  border-radius: 20px;
+  margin: 30px auto;
+}
+body main div.bakground_sections {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: var(--white);
+  transition: all 0.4s ease-in-out;
+}
+body main div.bakground_sections#background_signIn {
+  z-index: 2;
+  left: 0;
+}
+body main div.bakground_sections#background_CreatAcoonout {
+  right: 0;
+}
+body main section {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  position: absolute;
+  transition: left 0.6s ease-in-out;
+  z-index: 2;
+}
+body main section#container_signIn {
+  left: 0;
+}
+body main section#container_CreatAcoonout {
+  left: 0;
+  z-index: 1;
+}
+body main section h1 {
+  font-size: 3em;
+  font-weight: 800;
+}
+body main section form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+body main section form input {
+  width: calc(100% - 30px);
+  padding: 20px 15px;
+  background-color: var(--inputColor);
+  border: none;
+  border-radius: 20px;
+}
+body main section form p {
+  text-align: center;
+}
+body main section form button {
+  width: auto;
+  padding: 15px 20px;
+  color: var(--white);
+  background-color: var(--teal);
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  margin: 30px auto;
+}/*# sourceMappingURL=cadastro.css.map */

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Login</title>
+    <link rel="stylesheet" href="assets/style/cadastro.css">
+</head>
+<body>
+    <main>
+        <div id="background_signIn" class="bakground_sections"></div>
+        <section id="container_signIn">
+            <h1>Entrar</h1>
+            <p>Faça log in com sua conta google</p>
+            <form onsubmit="FazerLogin()">
+                <input type="email" placeholder="Email" required id="inputEmailUserLogin">
+                <input type="password" placeholder="Senha" required id="inputSenhaUserLogin">
+                <p>Esqueceu sua senha?</p>
+                <button>Entrar</button>
+            </form>
+        </section>
+
+        <div id="background_orange" class="right">
+            <div id="container_background_orange">
+                <section id="text_signIn">
+                    <h1>Bem Vindo</h1>
+                    <p>Já tem uma conta? Que bom tê-lo de volta! Faça login agora para acessar todas as suas conversas e continuar conectado com seus amigos.</p>
+                    <button onclick="changeModel()">Entrar</button>
+                </section>
+
+                <section id="text_createAccount">
+                    <h1>Bem Vindo de Volta!</h1>
+                    <p>Ainda não possui uma conta? Sem preocupações! Crie a sua agora mesmo e faça parte da nossa comunidade.</p>
+                    <button onclick="changeModel()">Criar uma conta</button>
+                </section>
+            </div>
+        </div>
+
+        <div id="background_CreatAcoonout" class="bakground_sections"></div>
+        <section id="container_CreatAcoonout">
+            <h1>Criar uma conta</h1>
+            <p>Faça parte da nossa comunidade hoje mesmo .-.</p>
+            <form onsubmit="Cadastrar()">
+                <input type="text" placeholder="Nome" required id="inputNomeUserCadastro">
+                <input type="email" placeholder="Email" required id="inputEmailUserCadastro">
+                <input type="password" placeholder="Senha" required id="inputSenhaUserCadastro">
+                <button>Criar Conta</button>
+            </form>
+        </section>
+    </main>
+
+    <!--? Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+    <script src="Assets/Js/firebase.js"></script>
+
+    <!--? Scripts -->
+    <script src="assets/js/cadastro.js"></script>
+</body>
+</html>

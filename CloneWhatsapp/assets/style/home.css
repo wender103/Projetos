@@ -1,0 +1,691 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --pale_green: #EBF3E9;
+  --teal: #3AB795;
+  --pale_mint: #E1ECE1;
+  --pale_greenish_blue: #AED1AC;
+  --pale_greenish_gray: #D3E8D2;
+  --dark_gray: #424941;
+  --ivory_white: #FBFDF6;
+  --darkness: rgba(0, 0, 0, 0.342);
+  --darkness_ligth: rgba(0, 0, 0, 0.164);
+  --darkness_dark: rgba(0, 0, 0, 0.50);
+  --lime-green: #49AD09;
+  --medium-lime-green: #61C554;
+  --light-grayish-blue: #E8ECEF;
+  --light-gray: #F9F9F9;
+  --light-blue-gray: #F1F4F7;
+  --gray: #bebebe;
+  --dark-pink: #CC3169;
+  --font_montserrat: "Montserrat", sans-serif;
+  --font_inter: "Inter", sans-serif;
+  --font_roboto: "Roboto", sans-serif;
+  --font_nunito: "Nunito", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  font-family: var(--font_roboto);
+  color: var(--dark_gray);
+  overflow: hidden;
+}
+body section#contacts_panel {
+  width: calc(100% - 40px);
+  max-width: 350px;
+  height: calc(100vh - 40px);
+  background-color: var(--ivory_white);
+  padding: 20px;
+  overflow: auto;
+}
+body section#contacts_panel div#container_top_contacts_panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0 30px;
+}
+body section#contacts_panel div#container_top_contacts_panel h1 {
+  font-family: var(--font_nunito);
+}
+body section#contacts_panel div#container_top_contacts_panel ul {
+  display: flex;
+  gap: 10px;
+}
+body section#contacts_panel div#container_top_contacts_panel ul li {
+  width: 1.3em;
+  height: 1.3em;
+}
+body section#contacts_panel div#container_top_contacts_panel ul li svg {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+body section#contacts_panel div#container_input {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--pale_mint);
+  border-radius: 40px;
+}
+body section#contacts_panel div#container_input input {
+  width: calc(100% - 50px);
+  height: 50px;
+  border-radius: 40px;
+  border: none;
+  padding: 0 0 0 20px;
+  background-color: transparent;
+}
+body section#contacts_panel div#container_input div#cotnainer_icon_search_input {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--pale_greenish_gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body section#contacts_panel div#container_input div#cotnainer_icon_search_input svg {
+  width: 1.7em;
+}
+body section#contacts_panel article#container_contacts {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 0;
+  gap: 20px;
+}
+body section#contacts_panel article#container_contacts div.contacts {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+body section#contacts_panel article#container_contacts div.contacts div.container_img_perfil {
+  min-width: 60px;
+  min-height: 60px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+body section#contacts_panel article#container_contacts div.contacts div.container_img_perfil img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body section#contacts_panel article#container_contacts div.contacts div.container_about_contact_msg {
+  width: calc(100% - 30px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+body section#contacts_panel article#container_contacts div.contacts div.container_about_contact_msg div.about_contact {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+body section#contacts_panel article#container_contacts div.contacts div.container_about_contact_msg div.about_contact p {
+  font-weight: 600;
+  font-size: 0.8em;
+}
+body section#contacts_panel article#container_contacts div.contacts div.container_about_contact_msg div.about_contact span {
+  width: 248px;
+  height: 10px;
+  font-size: 0.6em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body section#contacts_panel article#container_contacts div.contacts div.container_about_contact_msg div.infos_contact {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+body section#contacts_panel article#container_contacts div.contacts div.container_about_contact_msg div.infos_contact p {
+  font-size: 0.7em;
+}
+body section#contacts_panel article#container_contacts div.contacts div.container_about_contact_msg div.infos_contact span.msg_read {
+  color: var(--teal);
+  font-family: var(--font_inter);
+  font-weight: 600;
+  font-size: 0.7em;
+}
+body section#contacts_panel div#add_contact {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #D3E8D2;
+  padding: 10px;
+  cursor: pointer;
+}
+body section#contacts_panel div#add_contact img {
+  width: 95%;
+  height: 95%;
+}
+body section#contacts_panel div#pop_up_add_user {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--darkness_dark);
+  z-index: 3;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+body section#contacts_panel div#pop_up_add_user div {
+  width: 95%;
+  max-width: 350px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--white);
+  font-size: 0.8em;
+  color: var(--dark_gray);
+  position: relative;
+}
+body section#contacts_panel div#pop_up_add_user div img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+  margin: auto;
+}
+body section#contacts_panel div#pop_up_add_user div h3 {
+  text-align: center;
+  margin: 15px 0 20px;
+}
+body section#contacts_panel div#pop_up_add_user div input {
+  width: 90%;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 5px 0 20px;
+  border: transparent;
+  background-color: var(--pale_mint);
+  outline: none;
+}
+body section#contacts_panel div#pop_up_add_user div button {
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  border: none;
+  background-color: var(--pale_greenish_gray);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.01), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.02), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.03), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.04), 0px 100px 80px 0px rgba(0, 0, 0, 0);
+}
+body section#contacts_panel div#pop_up_add_user div button.btn_x {
+  padding: 5px 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+body section#container_msgs {
+  width: 100%;
+  height: 81vh;
+  overflow: auto;
+}
+body section#container_msgs div#background_no_msgs {
+  width: calc(100% - 390px);
+  top: 0;
+  right: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: var(--white);
+  z-index: 2;
+}
+body section#container_msgs div#background_no_msgs div {
+  width: 95%;
+  max-width: 600px;
+  text-align: center;
+}
+body section#container_msgs div#background_no_msgs div p {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+body section#container_msgs div#background_no_msgs div span {
+  color: var(--dark_gray);
+  font-size: 0.9em;
+}
+body section#container_msgs div#background_msgs {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../imgs/backgroundWhats.jpg");
+  background-color: var(--pale_mint);
+  opacity: 0.6;
+  background-size: contain;
+  top: 0px;
+  position: fixed;
+  z-index: -1;
+}
+body section#container_msgs article#container_msgs_open {
+  width: 100%;
+  height: auto;
+}
+body section#container_msgs article#container_msgs_open div#header_container_msgs_open {
+  width: calc(100% - 40px);
+  height: auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--ivory_white);
+  position: absolute;
+  top: 0;
+}
+body section#container_msgs article#container_msgs_open div#header_container_msgs_open div#container_about_contact_msgs_open {
+  color: var(--dark_gray);
+}
+body section#container_msgs article#container_msgs_open div#header_container_msgs_open div#container_about_contact_msgs_open p {
+  font-size: 1.2em;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.898px;
+}
+body section#container_msgs article#container_msgs_open div#header_container_msgs_open div#container_about_contact_msgs_open span {
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.475px;
+}
+body section#container_msgs article#container_msgs_open div#header_container_msgs_open div#container_icons_header_msgs_open {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+body section#container_msgs article#container_msgs_open div#header_container_msgs_open div#container_icons_header_msgs_open svg {
+  width: 1.3em;
+  height: 1.3em;
+}
+body section#container_msgs article#container_msgs_open div#container_msgs_contacts {
+  width: 90%;
+  margin: 30px auto;
+  height: auto;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+body section#container_msgs article#container_msgs_open div#container_msgs_contacts div.msg_contact {
+  align-self: flex-start;
+}
+body section#container_msgs article#container_msgs_open div#container_msgs_contacts div.msg_contact div.inside_contact_msgs {
+  width: 95%;
+  display: flex;
+  gap: 20px;
+}
+body section#container_msgs article#container_msgs_open div#container_msgs_contacts div.msg_contact div.inside_contact_msgs div.container_img_contact_msg_open {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  border-radius: 50%;
+  overflow: hidden;
+}
+body section#container_msgs article#container_msgs_open div#container_msgs_contacts div.msg_contact div.inside_contact_msgs div.container_img_contact_msg_open img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body section#container_msgs article#container_msgs_open div#container_msgs_contacts div.msg_contact div.inside_contact_msgs div {
+  width: auto;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+body section#container_msgs article#container_msgs_open div#container_msgs_contacts div.msg_contact div.inside_contact_msgs div p.horario_msgs {
+  font-size: 0.6em;
+}
+body section#container_msgs article#container_msgs_open div#container_msgs_contacts div.msg_contact div.inside_contact_msgs div div.container_msg_contact {
+  padding: 10px;
+  margin: 5px 0 0;
+  background-color: #D3E8D2;
+  border-radius: 0px 20px 20px 20px;
+  box-shadow: 0 1px 0.5px var(--darkness_ligth);
+}
+body section#container_msgs article#container_msgs_open div#container_msgs_contacts div.msg_contact div.inside_contact_msgs div div.container_msg_contact p {
+  max-width: 500px;
+  font-size: 0.8em;
+  word-wrap: break-word; /* ou overflow-wrap: break-word; */
+}
+body section#container_msgs article#container_msgs_open div#container_msgs_contacts div.my_msgs {
+  align-self: flex-end;
+}
+body section#container_msgs article#container_msgs_open div#container_msgs_contacts div.my_msgs div.inside_my_msgs {
+  width: 95%;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+body section#container_msgs article#container_msgs_open div#container_msgs_contacts div.my_msgs div.inside_my_msgs div.container_img_contact_msg_open {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+body section#container_msgs article#container_msgs_open div#container_msgs_contacts div.my_msgs div.inside_my_msgs div.container_img_contact_msg_open img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body section#container_msgs article#container_msgs_open div#container_msgs_contacts div.my_msgs div.inside_my_msgs div {
+  width: auto;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+body section#container_msgs article#container_msgs_open div#container_msgs_contacts div.my_msgs div.inside_my_msgs div p.horario_msgs {
+  font-size: 0.6em;
+}
+body section#container_msgs article#container_msgs_open div#container_msgs_contacts div.my_msgs div.inside_my_msgs div div.container_msg_contact {
+  padding: 10px;
+  margin: 5px 0 0;
+  background-color: #D3E8D2;
+  border-radius: 20px 0 20px 20px;
+  box-shadow: 0 1px 0.5px var(--darkness_ligth);
+}
+body section#container_msgs article#container_msgs_open div#container_msgs_contacts div.my_msgs div.inside_my_msgs div div.container_msg_contact p {
+  max-width: 500px;
+  font-size: 0.8em;
+  word-wrap: break-word; /* ou overflow-wrap: break-word; */
+}
+body section#container_msgs article#container_msgs_open div#container_input_send_msg {
+  width: calc(95% - 390px);
+  height: auto;
+  display: flex;
+  background-color: var(--pale_mint);
+  border-radius: 40px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+body section#container_msgs article#container_msgs_open div#container_input_send_msg textarea {
+  width: calc(100% - 40px);
+  padding: 20px 0 0 20px;
+  height: 30px;
+  border: none;
+  resize: none;
+  font-family: var(--font_roboto);
+  background-color: transparent;
+  outline: none;
+}
+body section#container_msgs article#container_msgs_open div#container_input_send_msg div#container_icons_input_send_msg {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+body section#container_msgs article#container_msgs_open div#container_input_send_msg div#container_icons_input_send_msg svg {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+body section#container_msgs article#container_msgs_open div#container_input_send_msg div#container_icons_input_send_msg button {
+  padding: 15px;
+  border: none;
+  background-color: var(--pale_greenish_blue);
+  border-radius: 50%;
+  cursor: pointer;
+}
+body section#page_congig {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-content: center;
+  z-index: 4;
+}
+body section#page_congig article#container_left_painel_config {
+  width: calc(100% - 40px);
+  max-width: 350px;
+  height: calc(100vh - 40px);
+  background-color: var(--ivory_white);
+  padding: 20px;
+}
+body section#page_congig article#container_left_painel_config div#header_left_painel_config {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body section#page_congig article#container_left_painel_config div#header_left_painel_config h1 {
+  font-size: 1.4em;
+}
+body section#page_congig article#container_left_painel_config div#header_left_painel_config button {
+  border: none;
+  background-color: transparent;
+  font-family: var(--font_roboto);
+  cursor: pointer;
+}
+body section#page_congig article#container_left_painel_config div#header_left_painel_config button svg {
+  width: 20px;
+  height: 20px;
+}
+body section#page_congig article#container_left_painel_config div#container_about_user_config {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: var(--pale_green);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  position: relative;
+  margin: 20px 0;
+}
+body section#page_congig article#container_left_painel_config div#container_about_user_config img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+body section#page_congig article#container_left_painel_config div#container_about_user_config div p {
+  font-size: 0.9em;
+  font-weight: 500;
+}
+body section#page_congig article#container_left_painel_config div#container_about_user_config div span {
+  font-size: 0.7em;
+}
+body section#page_congig article#container_left_painel_config div#container_about_user_config button {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--pale_greenish_gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -22.5px;
+  right: 20px;
+}
+body section#page_congig article#container_left_painel_config div#container_about_user_config button svg {
+  width: 50%;
+  height: 50%;
+}
+body section#page_congig article#container_left_painel_config div#options_config p.title_options_config {
+  margin: 20px 0 5px 10px;
+  font-size: 0.8em;
+}
+body section#page_congig article#container_left_painel_config div#options_config div.options_config {
+  width: calc(100% - 40px);
+  padding: 0 20px;
+  height: 60px;
+  background-color: var(--pale_green);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  margin-bottom: 5px;
+  transition: all 0.2s ease-in-out;
+}
+body section#page_congig article#container_left_painel_config div#options_config div.options_config:hover {
+  cursor: pointer;
+  background-color: var(--pale_greenish_blue);
+}
+body section#page_congig article#container_left_painel_config div#options_config div.options_config#options_config_active {
+  background-color: var(--pale_greenish_blue);
+}
+body section#page_congig article#container_left_painel_config div#options_config div.options_config div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+body section#page_congig article#container_left_painel_config div#options_config div.options_config div div.contaienr_img_option_config {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: var(--pale_greenish_gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body section#page_congig article#container_left_painel_config div#options_config div.options_config div div.contaienr_img_option_config#img_user_options_config {
+  padding: 0;
+}
+body section#page_congig article#container_left_painel_config div#options_config div.options_config div div.contaienr_img_option_config#img_user_options_config img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body section#page_congig article#container_left_painel_config div#options_config div.options_config div div.contaienr_img_option_config img {
+  width: 90%;
+  height: 90%;
+}
+body section#page_congig article#container_left_painel_config div#options_config div.options_config div p {
+  font-size: 0.8em;
+  font-weight: 400;
+}
+body section#page_congig article#container_left_painel_config div#options_config div.options_config svg {
+  width: 20px;
+  height: 20px;
+}
+body section#page_congig article#main_page_config {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--white);
+}
+body section#page_congig article#main_page_config div#about_user h1 {
+  margin: 30px 30px 20px;
+}
+body section#page_congig article#main_page_config div#about_user img {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body section#page_congig article#main_page_config div#about_user p {
+  text-align: center;
+  margin: 0 0 20px;
+}
+body section#page_congig article#main_page_config div#about_user span {
+  display: block;
+  text-align: center;
+}
+body section#page_congig article#main_page_config div#about_user div#container_codigo_user {
+  width: calc(100% - 390px);
+  display: block;
+  position: absolute;
+  text-align: center;
+  bottom: 20px;
+}
+body section#page_congig article#main_page_config div#about_user div#container_codigo_user span {
+  font-size: 0.8em;
+}
+body div#container_aviso_pedido_amizade {
+  width: 95%;
+  max-width: 330px;
+  position: fixed;
+  transition: all 1s ease-in-out;
+  z-index: 5;
+  right: -100vw;
+  bottom: 20px;
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  background-color: var(--pale_green);
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px var(--darkness_ligth);
+}
+body div#container_aviso_pedido_amizade.container_aviso_pedido_amizade_active {
+  right: 20px;
+  bottom: 20px;
+}
+body div#container_aviso_pedido_amizade div#main_about_pedido_amizade {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+body div#container_aviso_pedido_amizade div#main_about_pedido_amizade img {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+body div#container_aviso_pedido_amizade div#main_about_pedido_amizade div p {
+  font-size: 0.9em;
+  font-weight: 500;
+}
+body div#container_aviso_pedido_amizade div#main_about_pedido_amizade div span {
+  font-size: 0.7em;
+}
+body div#container_aviso_pedido_amizade div#btns_pedido_amizade {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+body div#container_aviso_pedido_amizade div#btns_pedido_amizade button {
+  border: none;
+  background-color: var(--pale_greenish_gray);
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: var(--font_roboto);
+}
+body div#container_aviso_pedido_amizade div#btns_pedido_amizade button:nth-child(2) {
+  background-color: var(--pale_mint);
+}/*# sourceMappingURL=home.css.map */

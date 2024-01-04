@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whatsapp</title>
+    <link rel="stylesheet" href="assets/style/home.css">
+</head>
+<body>
+    <section id="contacts_panel">
+        <div id="container_top_contacts_panel">
+            <h1>Whatsapp</h1>
+
+            <ul>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="67" height="66" viewBox="0 0 67 66" fill="none">
+                        <path d="M59.6339 30.9046C59.6339 27.5749 58.9781 24.2777 57.7039 21.2015C56.4296 18.1252 54.562 15.33 52.2075 12.9755C49.853 10.6211 47.0578 8.75338 43.9815 7.47915C40.9053 6.20491 37.6081 5.54907 34.2784 5.54907L34.2784 13.1627C36.6083 13.1627 38.9154 13.6216 41.0679 14.5132C43.2205 15.4048 45.1763 16.7117 46.8238 18.3592C48.4713 20.0067 49.7782 21.9625 50.6698 24.1151C51.5614 26.2676 52.0203 28.5747 52.0203 30.9046H59.6339Z" fill="#424941"/>
+                        <path d="M59.6339 34.852C59.6339 38.1817 58.9781 41.4788 57.7039 44.5551C56.4296 47.6314 54.562 50.4266 52.2075 52.7811C49.853 55.1355 47.0578 57.0032 43.9815 58.2774C40.9053 59.5517 37.6081 60.2075 34.2784 60.2075L34.2784 52.5939C36.6083 52.5939 38.9154 52.135 41.0679 51.2434C43.2205 50.3518 45.1763 49.0449 46.8238 47.3974C48.4713 45.7499 49.7782 43.7941 50.6698 41.6415C51.5614 39.489 52.0203 37.1819 52.0203 34.852H59.6339Z" fill="#424941"/>
+                        <path d="M4.97519 30.9046C4.97519 27.5749 5.63103 24.2777 6.90527 21.2015C8.1795 18.1252 10.0472 15.33 12.4017 12.9755C14.7561 10.6211 17.5513 8.75338 20.6276 7.47915C23.7039 6.20491 27.001 5.54907 30.3307 5.54907L30.3307 13.1627C28.0008 13.1627 25.6937 13.6216 23.5412 14.5132C21.3886 15.4048 19.4328 16.7117 17.7853 18.3592C16.1378 20.0067 14.831 21.9625 13.9393 24.1151C13.0477 26.2676 12.5888 28.5747 12.5888 30.9046H4.97519Z" fill="#424941"/>
+                        <path d="M4.97519 34.852C4.97519 38.1817 5.63103 41.4788 6.90527 44.5551C8.1795 47.6314 10.0472 50.4266 12.4017 52.7811C14.7561 55.1355 17.5513 57.0032 20.6276 58.2774C23.7039 59.5517 27.001 60.2075 30.3307 60.2075L30.3307 52.5939C28.0008 52.5939 25.6937 52.135 23.5412 51.2434C21.3886 50.3518 19.4328 49.0449 17.7853 47.3974C16.1378 45.7499 14.831 43.7941 13.9393 41.6415C13.0477 39.489 12.5888 37.1819 12.5888 34.852H4.97519Z" fill="#424941"/>
+                        <circle cx="32.7668" cy="33.3415" r="14.8227" fill="#424941"/>
+                    </svg>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+                        <path d="M50.1352 0.549072H6.28477C3.27005 0.549072 0.803467 3.01566 0.803467 6.03038V55.3621L11.7661 44.3995H50.1352C53.1499 44.3995 55.6165 41.9329 55.6165 38.9182V6.03038C55.6165 3.01566 53.1499 0.549072 50.1352 0.549072Z" fill="#424941"/>
+                    </svg>
+                </li>
+                <li onclick="abrirConfig()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="67" height="66" viewBox="0 0 67 66" fill="none">
+                        <circle cx="33.8335" cy="12.2153" r="5.73976" fill="#424941"/>
+                        <circle cx="33.8335" cy="32.8787" r="5.73976" fill="#424941"/>
+                        <circle cx="33.8335" cy="53.5415" r="5.73976" fill="#424941"/>
+                    </svg>
+                </li>
+            </ul>
+        </div>
+
+        <div id="container_input">
+            <input type="search" placeholder="Pesquisar contato..">
+            <div id="cotnainer_icon_search_input">
+                <svg xmlns="http://www.w3.org/2000/svg" width="84" height="84" viewBox="0 0 84 84" fill="none">
+                    <g clip-path="url(#clip0_7_235)">
+                    <path d="M54.5058 49.1757H51.7764L50.809 48.2428C54.1949 44.3042 56.2333 39.1908 56.2333 33.6284C56.2333 21.2251 46.1794 11.1711 33.7761 11.1711C21.3728 11.1711 11.3188 21.2251 11.3188 33.6284C11.3188 46.0316 21.3728 56.0856 33.7761 56.0856C39.3385 56.0856 44.4519 54.0471 48.3905 50.6613L49.3234 51.6287V54.3581L66.5981 71.5983L71.746 66.4504L54.5058 49.1757ZM33.7761 49.1757C25.1732 49.1757 18.2288 42.2312 18.2288 33.6284C18.2288 25.0255 25.1732 18.0811 33.7761 18.0811C42.3789 18.0811 49.3234 25.0255 49.3234 33.6284C49.3234 42.2312 42.3789 49.1757 33.7761 49.1757Z" fill="#424941"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_7_235">
+                    <rect width="82.9189" height="82.9189" fill="white" transform="translate(0.953613 0.806152)"/>
+                    </clipPath>
+                    </defs>
+                </svg>                    
+            </div>
+        </div>
+
+        <article id="container_contacts">
+            <div class="contacts">
+                <div class="container_img_perfil">
+                    <img src="https://t4.ftcdn.net/jpg/05/89/93/27/360_F_589932782_vQAEAZhHnq1QCGu5ikwrYaQD0Mmurm0N.jpg" alt="">
+                </div>
+
+                <div class="container_about_contact_msg">
+                    <div class="about_contact">
+                        <p class="name_contact">Matheus</p>
+                        <span class="last_msg">Bora jogar aquele Genshin?</span>
+                    </div>
+    
+                    <div class="infos_contact">
+                        <p>08:39</p>
+                        <span class="msg_read">✓✓</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contacts">
+                <div class="container_img_perfil">
+                    <img src="./assets/imgs/icons/user.png" alt="">
+                </div>
+
+                <div class="container_about_contact_msg">
+                    <div class="about_contact">
+                        <p class="name_contact">Matheus</p>
+                        <span class="last_msg">Bora jogar aquele Genshin?</span>
+                    </div>
+    
+                    <div class="infos_contact">
+                        <p>08:39</p>
+                        <span class="msg_read">✓✓</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contacts">
+                <div class="container_img_perfil">
+                    <img src="https://t4.ftcdn.net/jpg/05/89/93/27/360_F_589932782_vQAEAZhHnq1QCGu5ikwrYaQD0Mmurm0N.jpg" alt="">
+                </div>
+
+                <div class="container_about_contact_msg">
+                    <div class="about_contact">
+                        <p class="name_contact">Matheus</p>
+                        <span class="last_msg">Bora jogar aquele Genshin?</span>
+                    </div>
+    
+                    <div class="infos_contact">
+                        <p>08:39</p>
+                        <span class="msg_read">✓✓</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <div id="add_contact" onclick="abrirPopUpAddUser()">
+            <img src="./assets/imgs/icons/adicionar-usuario.png" alt="icone de adicionar user">
+        </div>
+
+        <div id="pop_up_add_user">
+            <div>
+                <button class="btn_x" onclick="fecharPopUpAddUser()">x</button>
+
+                <img src="./assets/imgs/icons/user.png" alt="user icon">
+                <h3>Novo Usuário</h3>
+                <p>Escreva o código do usuário que deseja adicionar</p>
+                <input type="text" placeholder="Digite o código..." id="input_codigo_add_user">
+                <button onclick="AddUser()">Adicionar</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="container_msgs">
+        <div id="background_no_msgs">
+            <div>
+                <p>Whatsapp Web</p>
+                <span>Envie e receba mensagens sem precisar manter seu celular conectado à internet.</span>
+                <span>Use o Whatsapp em até quatro aparelhos conectador e um celular ao mesmo tempo</span>
+            </div>
+        </div>
+
+        <div id="background_msgs"></div>
+
+        <article id="container_msgs_open">
+            <div id="header_container_msgs_open">
+                <div id="container_about_contact_msgs_open">
+                    <p id="name_contact_msgs_open">Nathan</p>
+                    <span>Visto por último às <span id="last_seen_timestamp">08:39</span></span>
+                </div>
+
+                <div id="container_icons_header_msgs_open">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" viewBox="0 0 66 66" fill="none">
+                        <g clip-path="url(#clip0_7_495)">
+                        <path d="M54.8063 42.353C51.4 42.353 48.13 41.808 45.0779 40.7997C44.1242 40.5 43.0614 40.718 42.2984 41.4537L36.3033 47.4488C28.5915 43.5248 22.2694 37.2299 18.3453 29.4908L24.3404 23.4685C25.1034 22.76 25.3214 21.6972 25.0217 20.7435C24.0134 17.6914 23.4684 14.4214 23.4684 11.0151C23.4684 9.51631 22.2421 8.29004 20.7434 8.29004H11.2057C9.70698 8.29004 8.48071 9.51631 8.48071 11.0151C8.48071 36.6032 29.2182 57.3407 54.8063 57.3407C56.3051 57.3407 57.5314 56.1144 57.5314 54.6157V45.078C57.5314 43.5793 56.3051 42.353 54.8063 42.353ZM52.0813 32.8154H57.5314C57.5314 19.2719 46.5495 8.29004 33.006 8.29004V13.7401C43.5519 13.7401 52.0813 22.2695 52.0813 32.8154ZM41.1811 32.8154H46.6312C46.6312 25.2943 40.5271 19.1902 33.006 19.1902V24.6403C37.5296 24.6403 41.1811 28.2918 41.1811 32.8154Z" fill="#424941"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_7_495">
+                        <rect width="65.4009" height="65.4009" fill="white" transform="translate(0.305664 0.11499)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" viewBox="0 0 66 66" fill="none">
+                        <circle cx="33.5526" cy="12.2703" r="5.70706" fill="#424941"/>
+                        <circle cx="33.5524" cy="32.8157" r="5.70706" fill="#424941"/>
+                        <circle cx="33.5524" cy="53.3614" r="5.70706" fill="#424941"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div id="container_msgs_contacts">
+                
+                <div class="msg_contact">
+                    <div class="inside_contact_msgs">
+                        <div class="container_img_contact_msg_open">
+                            <img src="./assets/imgs/icons/user.png" class="img_perfil_user">
+                        </div>
+                        
+                        <div>
+                            <p>08:39</p>
+                            <div class="container_msg_contact">
+                                <p>Esse é um exemplo de texto dentro de uma volha de texto. :). Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum labore placeat eum, porro ex, similique suscipit excepturi fugiat natus ad libero, quasi maxime deleniti odit perferendis exercitationem quae beatae asperiores? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat delectus est placeat optio exercitationem voluptatem ex autem sint aut perspiciatis? Ad illum quisquam at nulla porro sapiente hic maxime exercitationem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio distinctio omnis, quo placeat, hic id temporibus natus ex facere quae aperiam soluta deleniti veritatis vitae quas obcaecati aut nesciunt eum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="my_msgs"> 
+                    <div class="inside_my_msgs">
+                        <div>
+                            <p>08:39</p>
+                            <div class="container_msg_contact">
+                                <p>Esse é um exemplo de texto dentro de uma volha de texto. :)</p>
+                            </div>
+                        </div>
+    
+                        <div class="container_img_contact_msg_open">
+                            <img src="./assets/imgs/icons/user.png" class="img_perfil_user">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="container_input_send_msg">
+                <textarea name="" cols="30" rows="10" placeholder="Digite aqui..." id="textarea_msg"></textarea>
+                <div id="container_icons_input_send_msg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="71" height="72" viewBox="0 0 71 72" fill="none">
+                        <g clip-path="url(#clip0_7_560)">
+                        <path d="M48.9441 18.5634V52.3299C48.9441 58.819 43.6883 64.0748 37.1993 64.0748C30.7102 64.0748 25.4544 58.819 25.4544 52.3299V15.6272C25.4544 11.5752 28.7429 8.28665 32.7949 8.28665C36.8469 8.28665 40.1355 11.5752 40.1355 15.6272V46.4575C40.1355 48.0724 38.8142 49.3937 37.1993 49.3937C35.5843 49.3937 34.263 48.0724 34.263 46.4575V18.5634H29.8587V46.4575C29.8587 50.5095 33.1473 53.798 37.1993 53.798C41.2512 53.798 44.5398 50.5095 44.5398 46.4575V15.6272C44.5398 9.13816 39.284 3.88232 32.7949 3.88232C26.3059 3.88232 21.05 9.13816 21.05 15.6272V52.3299C21.05 61.256 28.2731 68.4791 37.1993 68.4791C46.1254 68.4791 53.3485 61.256 53.3485 52.3299V18.5634H48.9441Z" fill="#424941"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_7_560">
+                        <rect width="70.4693" height="70.4693" fill="white" transform="translate(0.496948 0.945312)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="79" viewBox="0 0 80 79" fill="none">
+                        <g clip-path="url(#clip0_7_563)">
+                        <path d="M51.4767 36.4733C54.1752 36.4733 56.3627 34.2857 56.3627 31.5872C56.3627 28.8887 54.1752 26.7012 51.4767 26.7012C48.7782 26.7012 46.5906 28.8887 46.5906 31.5872C46.5906 34.2857 48.7782 36.4733 51.4767 36.4733Z" fill="#424941"/>
+                        <path d="M28.6753 36.4733C31.3738 36.4733 33.5614 34.2857 33.5614 31.5872C33.5614 28.8887 31.3738 26.7012 28.6753 26.7012C25.9768 26.7012 23.7892 28.8887 23.7892 31.5872C23.7892 34.2857 25.9768 36.4733 28.6753 36.4733Z" fill="#424941"/>
+                        <path d="M51.4767 36.4733C54.1752 36.4733 56.3627 34.2857 56.3627 31.5872C56.3627 28.8887 54.1752 26.7012 51.4767 26.7012C48.7782 26.7012 46.5906 28.8887 46.5906 31.5872C46.5906 34.2857 48.7782 36.4733 51.4767 36.4733Z" fill="#424941"/>
+                        <path d="M28.6753 36.4733C31.3738 36.4733 33.5614 34.2857 33.5614 31.5872C33.5614 28.8887 31.3738 26.7012 28.6753 26.7012C25.9768 26.7012 23.7892 28.8887 23.7892 31.5872C23.7892 34.2857 25.9768 36.4733 28.6753 36.4733Z" fill="#424941"/>
+                        <path d="M40.0436 7.15674C22.0629 7.15674 7.50244 21.7498 7.50244 39.7304C7.50244 57.7111 22.0629 72.3041 40.0436 72.3041C58.0568 72.3041 72.6498 57.7111 72.6498 39.7304C72.6498 21.7498 58.0568 7.15674 40.0436 7.15674ZM40.0761 65.7894C25.6786 65.7894 14.0172 54.128 14.0172 39.7304C14.0172 25.3329 25.6786 13.6715 40.0761 13.6715C54.4737 13.6715 66.1351 25.3329 66.1351 39.7304C66.1351 54.128 54.4737 65.7894 40.0761 65.7894ZM40.0761 57.646C47.6658 57.646 54.148 52.9228 56.7539 46.2452H51.3141C49.0665 50.1214 44.897 52.7599 40.0761 52.7599C35.2552 52.7599 31.1184 50.1214 28.8382 46.2452H23.3984C26.0043 52.9228 32.4865 57.646 40.0761 57.646Z" fill="#424941"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_7_563">
+                        <rect width="78.1768" height="78.1768" fill="white" transform="translate(0.987915 0.64209)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+
+                    <button id="btn_audio" onclick="enviarMensagem()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="79" height="79" viewBox="0 0 79 79" fill="none">
+                            <g clip-path="url(#clip0_7_557)">
+                            <path d="M39.6209 46.2452C45.0282 46.2452 49.3605 41.8803 49.3605 36.4731L49.393 16.9288C49.393 11.5216 45.0282 7.15674 39.6209 7.15674C34.2137 7.15674 29.8488 11.5216 29.8488 16.9288V36.4731C29.8488 41.8803 34.2137 46.2452 39.6209 46.2452ZM56.885 36.4731C56.885 46.2452 48.6113 53.0856 39.6209 53.0856C30.6306 53.0856 22.3569 46.2452 22.3569 36.4731H16.8193C16.8193 47.5807 25.6794 56.7665 36.3636 58.3626V69.0467H42.8783V58.3626C53.5625 56.799 62.4225 47.6133 62.4225 36.4731H56.885Z" fill="#424941"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_7_557">
+                            <rect width="78.1768" height="78.1768" fill="white" transform="translate(0.532471 0.64209)"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!--? Pages -->
+    <section id="page_congig">
+        <article id="container_left_painel_config">
+            <div id="header_left_painel_config">
+                <h1>Configurações</h1>
+                <button onclick="fehcarConfig()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" viewBox="0 0 66 66" fill="none">
+                        <g clip-path="url(#clip0_9_984)">
+                        <path d="M52.0758 17.5687L48.2112 13.7041L32.8899 29.0254L17.5687 13.7041L13.7041 17.5687L29.0254 32.8899L13.7041 48.2112L17.5687 52.0758L32.8899 36.7545L48.2112 52.0758L52.0758 48.2112L36.7545 32.8899L52.0758 17.5687Z" fill="#424941"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_9_984">
+                        <rect width="65.78" height="65.78" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="container_about_user_config">
+                <img src="./assets/imgs/icons/user.png" alt="user icon" class="img_perfil_user">
+                <div>
+                    <p id="nome_user_config" class="nome_user">Nathan</p>
+                    <span id="recado_user_config" class="recado_user">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    </span>
+                </div>
+
+                <button id="btn_edit_user_config">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="61" height="61" viewBox="0 0 61 61" fill="none">
+                        <path d="M0.83252 48.4597V60.9601H13.3328L50.2005 24.0925L37.7001 11.5921L0.83252 48.4597ZM59.8674 14.4255C61.1674 13.1255 61.1674 11.0255 59.8674 9.72542L52.0672 1.92522C50.7671 0.625187 48.6671 0.625187 47.367 1.92522L41.2669 8.02538L53.7672 20.5257L59.8674 14.4255Z" fill="#424941"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="options_config">
+                <p class="title_options_config">Sobre</p>
+                <div class="options_config" id="options_config_active">
+                    <div>
+                        <div class="contaienr_img_option_config" id="img_user_options_config">
+                            <img src="./assets/imgs/icons/user.png" class="img_perfil_user">
+                        </div>
+                        <p>Sobre o usuário</p>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none">
+                        <g clip-path="url(#clip0_9_1071)">
+                        <path d="M17.395 12.1882L40.7067 35.4998L17.395 58.8115L23.6667 65.0832L53.25 35.4998L23.6667 5.9165L17.395 12.1882Z" fill="#424941"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_9_1071">
+                        <rect width="71" height="71" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                
+                <p class="title_options_config">Dispositivos</p>
+                <div class="options_config">
+                    <div>
+                        <div class="contaienr_img_option_config">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none">
+                                <path d="M59.1667 53.2502C62.4208 53.2502 65.0833 50.5877 65.0833 47.3335V17.7502C65.0833 14.496 62.4208 11.8335 59.1667 11.8335H11.8333C8.57917 11.8335 5.91667 14.496 5.91667 17.7502V47.3335C5.91667 50.5877 8.57917 53.2502 11.8333 53.2502H0V59.1668H71V53.2502H59.1667ZM11.8333 17.7502H59.1667V47.3335H11.8333V17.7502Z" fill="#424941"/>
+                            </svg>
+                        </div>
+                        <p>Aparelhos &<br>Conectados</p>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none">
+                        <g clip-path="url(#clip0_9_1071)">
+                        <path d="M17.395 12.1882L40.7067 35.4998L17.395 58.8115L23.6667 65.0832L53.25 35.4998L23.6667 5.9165L17.395 12.1882Z" fill="#424941"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_9_1071">
+                        <rect width="71" height="71" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+
+                <p class="title_options_config">Definir</p>
+                <div class="options_config">
+                    <div>
+                        <div class="contaienr_img_option_config">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none">
+                                <g clip-path="url(#clip0_9_1054)">
+                                <path d="M53.2499 23.6668H50.2916V17.7502C50.2916 9.58516 43.6649 2.9585 35.4999 2.9585C27.3349 2.9585 20.7083 9.58516 20.7083 17.7502V23.6668H17.7499C14.4958 23.6668 11.8333 26.3293 11.8333 29.5835V59.1668C11.8333 62.421 14.4958 65.0835 17.7499 65.0835H53.2499C56.5041 65.0835 59.1666 62.421 59.1666 59.1668V29.5835C59.1666 26.3293 56.5041 23.6668 53.2499 23.6668ZM35.4999 50.2918C32.2458 50.2918 29.5833 47.6293 29.5833 44.3752C29.5833 41.121 32.2458 38.4585 35.4999 38.4585C38.7541 38.4585 41.4166 41.121 41.4166 44.3752C41.4166 47.6293 38.7541 50.2918 35.4999 50.2918ZM44.6707 23.6668H26.3291V17.7502C26.3291 12.6914 30.4412 8.57933 35.4999 8.57933C40.5587 8.57933 44.6707 12.6914 44.6707 17.7502V23.6668Z" fill="#424941"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_9_1054">
+                                <rect width="71" height="71" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <p>Conta &<br>Privacidade</p>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none">
+                        <g clip-path="url(#clip0_9_1071)">
+                        <path d="M17.395 12.1882L40.7067 35.4998L17.395 58.8115L23.6667 65.0832L53.25 35.4998L23.6667 5.9165L17.395 12.1882Z" fill="#424941"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_9_1071">
+                        <rect width="71" height="71" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="options_config">
+                    <div>
+                        <div class="contaienr_img_option_config">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none">
+                                <g clip-path="url(#clip0_9_1068)">
+                                  <path d="M59.1668 5.9165H11.8334C8.57925 5.9165 5.91675 8.579 5.91675 11.8332V65.0832L17.7501 53.2498H59.1668C62.4209 53.2498 65.0834 50.5873 65.0834 47.3332V11.8332C65.0834 8.579 62.4209 5.9165 59.1668 5.9165Z" fill="#424941"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_9_1068">
+                                    <rect width="71" height="71" fill="white"/>
+                                  </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <p>Conversas</p>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none">
+                        <g clip-path="url(#clip0_9_1071)">
+                        <path d="M17.395 12.1882L40.7067 35.4998L17.395 58.8115L23.6667 65.0832L53.25 35.4998L23.6667 5.9165L17.395 12.1882Z" fill="#424941"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_9_1071">
+                        <rect width="71" height="71" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="options_config">
+                    <div>
+                        <div class="contaienr_img_option_config">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none">
+                                <g clip-path="url(#clip0_9_1065)">
+                                  <path d="M47.3334 50.3213V29.5833H41.4168V50.3213H32.5417L44.3751 62.125L56.2084 50.3213H47.3334ZM26.6251 8.875L14.7917 20.6787H23.6667V41.4167H29.5834V20.6787H38.4584L26.6251 8.875Z" fill="black"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_9_1065">
+                                    <rect width="71" height="71" fill="white"/>
+                                  </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <p>Armazenamento &<br>Dados</p>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="71" height="71" viewBox="0 0 71 71" fill="none">
+                        <g clip-path="url(#clip0_9_1071)">
+                        <path d="M17.395 12.1882L40.7067 35.4998L17.395 58.8115L23.6667 65.0832L53.25 35.4998L23.6667 5.9165L17.395 12.1882Z" fill="#424941"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_9_1071">
+                        <rect width="71" height="71" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </article>
+
+        <article id="main_page_config">
+            <div id="about_user">
+                <h1>Sobre o usuário</h1>
+
+                <img src="./assets/imgs/icons/user.png" class="img_perfil_user">
+                <p class="nome_user">Nathan</p>
+                <span class="recado_user">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                <div id="container_codigo_user">
+                    <span id="span_codigo_user">adfjqk3k2hl43jl3çk6</span>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!--? Aviso pedido de amizade -->
+    <div id="container_aviso_pedido_amizade">
+        <p>Pedido de amizade</p>
+        <div id="main_about_pedido_amizade">
+            <img src="./assets/imgs/user.png" id="img_user_pedido_amizade">
+            <div>
+                <p id="name_user_pedido_amizade">Nathan</p>
+                <span id="recado_user_pedido_amizade">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+            </div>
+        </div>
+
+        <div id="btns_pedido_amizade">
+            <button onclick="aceitarPedidoAmizade()">Aceitar</button>
+            <button onclick="recusarPedidoAmizade()">Recusar</button>
+        </div>
+    </div>
+
+    <!--? Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+    <script src="Assets/Js/firebase.js"></script>
+
+    <!--? Scripts -->
+    <script src="assets/utils/index.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/AddUser.js"></script>
+</body>
+</html>
