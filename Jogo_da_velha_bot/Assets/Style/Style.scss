@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    main {
+        width: 100%;
+        max-width: 500px;
+        max-height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        section#esqueleto_do_jogo {
+            width: 100%;
+            height: 500px;
+            position: relative;
+            
+            div#container_linhas_verticais {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+
+                div:first-child {
+                    left: 166.6px;
+                }
+
+                div:last-child {
+                    right: 166.6px;
+                }
+
+                div.linha_vertical {
+                    width: 10px;
+                    height: 100%;
+                    background-color: white;
+                    position: absolute;
+                }
+            }
+
+            div#container_linhas_horizontais {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+
+                div:first-child {
+                    top: 166.6px;
+                }
+
+                div:last-child {
+                    bottom: 166.6px;
+                }
+
+                div.linha_horizontal {
+                    width: 100%;
+                    height: 10px;
+                    background-color: white;
+                    position: absolute;
+                }
+            }
+        }
+
+        section#container_clicks {
+            width: 100%;
+            height: 500px;
+            position: absolute;
+
+            div {
+                position: absolute;
+                width: 166px;
+                height: 166px;
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: rgba(196, 197, 255, 0.158);
+                }
+
+                div.circulo {
+                    width: 130px;
+                    height: 130px;
+                    border-radius: 50%;
+                    background-color: green;
+                }
+
+                div.quadrado {
+                    width: 130px;
+                    height: 130px;
+                    background-color: blue;
+                }
+
+                &#click2 {
+                    left: 167px;
+                }
+
+                &#click3 {
+                    right: 0px;
+                }
+
+                &#click4 {
+                    top: 167px;
+                }
+
+                &#click5 {
+                    top: 167px;
+                    left: 167px;
+                }
+
+                &#click6 {
+                    top: 167px;
+                    right: 0px;
+                }
+
+                &#click7 {
+                    bottom: 0;
+                    left: 0;
+                }
+
+                &#click8 {
+                    bottom: 0;
+                    left: 167px;
+                }
+
+                &#click9 {
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
