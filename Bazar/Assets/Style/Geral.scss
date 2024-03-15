@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;300;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+
+:root {
+    //? Cores
+    --Marrom: #704F38;
+    --Marrom_Claro: #9c6f4e;
+    --Cinza: #404040;
+    --Branco: #fff;
+    --Preto: #000;
+
+    //? --
+    --Gray: #9B9B9B;
+    --DarkGray: #555F7E;
+    --Background: #F9F9F9;
+    --Background2: #F8F8F8;
+    --Primary: #DB3022;
+    --Error: #F01F0E;
+    --Orange: #FFA000;
+    --Blue: #4400ff;
+    --Success: #2AA952;
+    --SaleHot: #01C32C;
+
+    //? Fontes
+    --Fonte_Montserrat: "Montserrat", sans-serif;
+    --Fonte_League_Spartan: "League Spartan", sans-serif;
+    --Fonte_Castoro: "Castoro", serif;
+    --Fonte_Heebo: 'Heebo', sans-serif;
+    --Fonte_Inter: 'Inter', sans-serif;
+    --Fonte_Bodoni_Moda: "Bodoni Moda", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+input {
+    width: calc(100% - 32px);
+    padding: 9px 16px;
+    outline: none;
+}
+
+div#msg_top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Marrom);
+    padding: 7px 0;
+    color: var(--Branco);
+    font-size: 12px;
+    font-family: var(--Fonte_League_Spartan);
+}
+
+span.circulo_pequeno {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--Marrom);
+}
+
+a {
+    color: var(--Marrom);
+}
+
+footer {
+    width: 100%;
+    height: 400px;
+    background-color: var(--Cinza);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>Gráfico de Linha</title>
+</head>
+<body>
+  <canvas id="total_visitantes"></canvas>
+
+  <script>
+    function TotalVisitantes() {
+        // Exemplo de dados (substitua isso pelos seus dados reais)
+        var dados = {
+            semanas: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],  // Número da semana
+            quantidade: [5, 8, 3, 10, 34, 4, 56, 65, 73, 77, 76, 54]  // Quantidade de compras para cada semana
+        };
+    
+        // Configuração do gráfico
+        var ctx = document.getElementById('total_visitantes').getContext('2d');
+        var comprasChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: dados.semanas,
+                datasets: [{
+                    label: 'Compras por Semana',
+                    data: dados.quantidade,
+                    borderColor: 'rgba(255, 99, 132, 1)',  // Cor da linha (vermelha)
+                    borderWidth: 2,
+                    hoverRadius: 6,  // Raio dos pontos ao passar o mouse
+                    fill: true,  // Preencher abaixo da linha
+                    backgroundColor: 'transparent',  // Cor do preenchimento
+                    lineTension: 0.3,  // Adiciona suavidade à linha
+                    borderCapStyle: 'round'  // Cantos arredondados na linha
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    annotation: {
+                        annotations: [{
+                            type: 'line',
+                            mode: 'horizontal',
+                            scaleID: 'y',
+                            value: 0,  // Posição da linha
+                            borderColor: 'rgba(0, 0, 0, 0.1)',  // Cor da linha pontilhada
+                            borderWidth: 1,
+                            borderDash: [5, 5],  // Linha pontilhada
+                            borderDashOffset: 0  // Deslocamento da linha pontilhada
+                        }]
+                    }
+                }
+            }
+        });
+    } TotalVisitantes()
+  </script>
+</body>
+</html>

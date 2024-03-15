@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Mercado Livre</title>
+    <link rel="stylesheet" href="Assets/Styles/Produto.css">
+</head>
+<body>
+    <header>
+        <div id="container_input">
+            <input type="search" placeholder="Pesquise por um produto">
+            <img src="Assets/Imgs/Icons/Search.png" alt="Icone de pesquisa">
+        </div>
+    </header>
+
+    <div id="header_main">
+        <button id="btn_back"></button>
+
+        <div id="numero_fotos">
+            <h1>01</h1>
+            <p>/05</p>
+        </div>
+    </div>
+
+    <main>
+
+        <section id="container_infos_produto">
+            <p id="nome"><span>Chair</span> / Meryl Lounge Chair</p>
+
+            <article>
+                <h1>Meryl Lounge Chair</h1>
+
+                <div id="container_preco">
+                    <p id="preco">$149.99</p>
+
+                    <div>
+                        <img src="Assets/Imgs/Icons/Stars.png" alt="Estrelas">
+                        <p>4.8/5.0 <span>(556)</span></p>
+                    </div>
+                </div>
+
+                <p id="desc">
+                    The gently curved lines accentuated by sewn details are kind to your body and pleasant to look at. Also, there’s a tilt and height-adjusting mechanism that’s built to outlast years of ups and downs.
+                </p>
+
+                <div id="container_cores">
+                    <div id="cor1" class="div_cores"></div>
+                    <div id="cor2" class="div_cores"></div>
+                    <div id="cor3" class="div_cores"></div>
+                    <div id="cor4" class="div_cores"></div>
+                </div>
+
+                <div id="container_btns">
+                    <div id="btn_quantidade">
+                        <button>-</button>
+                        <p>1</p>
+                        <button>+</button>
+                    </div>
+
+                    <button>Add to Cart</button>
+                </div>
+
+                <p id="frete">Free 3-5 day shipping  •  Tool-free assembly  •  30-day trial</p>
+
+                <div id="last_part">
+                    <button><img src="Assets/Imgs/Icons/heart.png" alt="Icone de coração"> Add to Wishlist</button>
+
+                    <div>
+                        <img src="Assets/Imgs/Icons/Social Icons.png" alt="Icones de midias sociais">
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section id="container_imgs_produto">
+            <img src="Assets/Imgs/Product/img_principal2.png" id="img_principal">
+
+            <article id="container_imgs_secundarias_produto">
+                <div class="img_secundarias"><img src="Assets/Imgs/Product/img1.png" alt=""></div>
+                <div class="img_secundarias"><img src="Assets/Imgs/Product/img2.png" alt=""></div>
+                <div class="img_secundarias"><img src="Assets/Imgs/Product/img3.png" alt=""></div>
+                <div class="img_secundarias"><img src="Assets/Imgs/Product/img4.png" alt=""></div>
+                <div class="img_secundarias"><img src="Assets/Imgs/Product/img5.png" alt=""></div>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        const img_secundarias = document.querySelectorAll('.img_secundarias')
+        const img_principal = document.querySelector('#img_principal')
+        for(let c = 0; c < img_secundarias.length; c++) {
+
+            img_secundarias[c].addEventListener('click', () => {
+                for(let b = 0; b < img_secundarias.length; b++) {
+                    img_secundarias[b].classList.remove('Active')
+                }
+
+                img_secundarias[c].classList.add('Active')
+                const src_img_selecionada = img_secundarias[c].querySelector('img').src
+                img_principal.src = src_img_selecionada
+            })
+        }
+    </script>
+</body>
+</html>

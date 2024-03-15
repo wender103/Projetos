@@ -30,7 +30,7 @@ function marcar_jogada() {
             if(!vitoria) {
                 // jogada_bot_random()
                 jogada_bot_dificil()
-                checar_vitoria()
+                // checar_vitoria()
             } else {
                 setTimeout(() => {
                     location.reload()

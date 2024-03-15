@@ -1,0 +1,456 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;300;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap");
+:root {
+  --Marrom: #704F38;
+  --Marrom_Claro: #9c6f4e;
+  --Cinza: #404040;
+  --Branco: #fff;
+  --Preto: #000;
+  --Gray: #9B9B9B;
+  --DarkGray: #555F7E;
+  --Background: #F9F9F9;
+  --Background2: #F8F8F8;
+  --Primary: #DB3022;
+  --Error: #F01F0E;
+  --Orange: #FFA000;
+  --Blue: #4400ff;
+  --Success: #2AA952;
+  --SaleHot: #01C32C;
+  --Fonte_Montserrat: "Montserrat", sans-serif;
+  --Fonte_League_Spartan: "League Spartan", sans-serif;
+  --Fonte_Castoro: "Castoro", serif;
+  --Fonte_Heebo: "Heebo", sans-serif;
+  --Fonte_Inter: "Inter", sans-serif;
+  --Fonte_Bodoni_Moda: "Bodoni Moda", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+input {
+  width: calc(100% - 32px);
+  padding: 9px 16px;
+  outline: none;
+}
+
+div#msg_top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Marrom);
+  padding: 7px 0;
+  color: var(--Branco);
+  font-size: 12px;
+  font-family: var(--Fonte_League_Spartan);
+}
+
+span.circulo_pequeno {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--Marrom);
+}
+
+a {
+  color: var(--Marrom);
+}
+
+footer {
+  width: 100%;
+  height: 400px;
+  background-color: var(--Cinza);
+}
+
+button {
+  color: var(--Branco);
+  background-color: var(--Primary);
+  border: none;
+  border-radius: 25px;
+}
+
+body nav {
+  width: auto;
+  min-height: 100vh;
+  background-color: var(--Primary);
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 15px;
+}
+body nav ul {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+body nav ul li {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  background-color: #FF1300;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  stroke: var(--Branco);
+}
+body nav ul li.btn_nav_active {
+  background-color: var(--Branco);
+}
+body nav ul li.btn_nav_active svg {
+  stroke: var(--Primary);
+}
+body nav ul li svg {
+  width: 100%;
+  height: 100%;
+}
+body main {
+  width: calc(100% - 70px);
+  position: absolute;
+  right: 0;
+  background-color: var(--Background2);
+}
+body main section.Paginas {
+  width: 100%;
+  display: none;
+  max-width: 1200px;
+  margin: auto;
+  min-height: 100vh;
+  height: auto;
+  font-family: var(--Fonte_Inter);
+}
+body main section.Paginas {
+  width: calc(100% - 96px);
+  padding: 15px 48px;
+}
+body main section.Paginas div.container_dashboards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+body main section.Paginas div.container_dashboards article {
+  padding: 32px;
+  background-color: var(--Branco);
+  box-shadow: 0px 8px 32px 0px rgba(51, 38, 174, 0.08);
+  border-radius: 16px;
+}
+body main section.Paginas div.container_dashboards article h3 {
+  font-size: 20px;
+}
+body main section.Paginas div.container_dashboards article span {
+  margin: 15px 0 20px;
+  display: block;
+  font-size: 14px;
+  color: var(--Gray);
+}
+body main section.Paginas div.container_dashboards article div.container_dashboard_infos {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(212px, 1fr));
+  gap: 10px;
+}
+body main section.Paginas div.container_dashboards article div.container_dashboard_infos.graficos_circular_infos_dev {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+body main section.Paginas div.container_dashboards article div.container_dashboard_infos.graficos_circular_infos_dev div.container_infos_para_o_dev {
+  width: 100%;
+  max-width: 375px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+body main section.Paginas div.container_dashboards article div.container_dashboard_infos.graficos_circular_infos_dev div.container_infos_para_o_dev div.container_texto_infos_para_o_dev {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+body main section.Paginas div.container_dashboards article div.container_dashboard_infos.graficos_circular_infos_dev div.container_infos_para_o_dev div.container_texto_infos_para_o_dev div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+body main section.Paginas div.container_dashboards article div.container_dashboard_infos.graficos_circular_infos_dev div.container_infos_para_o_dev div.container_texto_infos_para_o_dev div span {
+  margin: 0;
+}
+body main section.Paginas div.container_dashboards article div.container_dashboard_infos.graficos_circular_infos_dev div.container_infos_para_o_dev hr {
+  border-color: rgba(155, 155, 155, 0.231372549);
+}
+body main section.Paginas div.container_dashboards article div.container_dashboard_infos div.containers_dashboard {
+  background-color: var(--Branco);
+  border-radius: 12px;
+  box-shadow: 0px 8px 32px 0px rgba(51, 38, 174, 0.08);
+  padding: 5px 32px;
+  text-align: center;
+  margin: 20px 0;
+}
+body main section.Paginas div.container_dashboards article div.container_dashboard_infos div.containers_dashboard svg {
+  width: 20px;
+  height: 20px;
+}
+body main section.Paginas div.container_dashboards article div.container_dashboard_infos div.containers_dashboard:nth-child(1) {
+  stroke: var(--Primary);
+}
+body main section.Paginas div.container_dashboards article div.container_dashboard_infos div.containers_dashboard:nth-child(2) {
+  stroke: var(--Blue);
+}
+body main section.Paginas div.container_dashboards article div.container_dashboard_infos div.containers_dashboard:nth-child(3) {
+  stroke: var(--SaleHot);
+  fill: var(--SaleHot);
+}
+body main section.Paginas div.container_dashboards article div.container_dashboard_infos div.containers_dashboard:nth-child(4) {
+  stroke: var(--Orange);
+}
+body main section.Paginas div.container_dashboards article div.container_dashboard_infos div.containers_dashboard p {
+  color: var(--Gray);
+  font-size: 12px;
+}
+body main section.Paginas div.container_dashboards article div.container_dashboard_infos div.containers_dashboard div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 10px;
+}
+body main section.Paginas div.container_dashboards article div.container_dashboard_infos div.containers_dashboard div h3 {
+  color: var(--Black);
+  font-size: 18px;
+  font-weight: 500;
+}
+body main section.Paginas#Produtos div.container_dashboards {
+  grid-template-columns: repeat(auto-fill, minmax(calc(100% - 64px), 1fr));
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_add_produto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-top: 50px;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_add_produto div.container_imagens {
+  display: flex;
+  align-items: center;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_add_produto div.container_imagens div.container_imagens_laterais {
+  display: flex;
+  flex-direction: column;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_add_produto div.container_imagens div.container_imagens_laterais div {
+  overflow: hidden;
+  border-radius: 7px;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_add_produto div.container_imagens div.container_imagens_laterais div img {
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_add_produto div.container_imagens div.container_img_principal {
+  position: relative;
+  width: 100%;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_add_produto div.container_imagens div.container_img_principal label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_add_produto div.container_imagens div.container_img_principal img {
+  width: 70%;
+  height: 70%;
+  margin: auto;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_add_produto div.container_input_add_produto {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_add_produto div.container_input_add_produto div.container_inputs_add_produto {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_add_produto div.container_input_add_produto div.container_inputs_add_produto input, body main section.Paginas#Produtos div.container_dashboards article div.container_add_produto div.container_input_add_produto div.container_inputs_add_produto select {
+  width: 45%;
+  color: var(--Black);
+  outline: none;
+  border: none;
+  font-family: var(--Fonte_Heebo);
+  font-size: 14px;
+  background-color: var(--Background2);
+  padding: 5px;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_add_produto div.container_input_add_produto div.container_inputs_add_produto select {
+  width: calc(45% + 10px);
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_add_produto div.container_input_add_produto div.container_inputs_add_produto div.container_categoria_do_produto {
+  width: 45%;
+  position: relative;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_add_produto div.container_input_add_produto div.container_inputs_add_produto div.container_categoria_do_produto input {
+  width: 100%;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_add_produto div.container_input_add_produto div.container_inputs_add_produto div.container_categoria_do_produto ul {
+  display: none;
+  position: absolute;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_add_produto div.container_input_add_produto div.container_btn_add_produtos {
+  display: flex;
+  gap: 20px;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_add_produto div.container_input_add_produto div.container_btn_add_produtos button {
+  padding: 10px 20px;
+  background-color: var(--Error);
+  cursor: pointer;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_add_produto div.container_input_add_produto div.container_btn_add_produtos button:last-child {
+  background-color: var(--Gray);
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_filtro {
+  background-color: var(--Background2);
+  padding: 20px;
+  margin-top: 30px;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_filtro ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr repeat(8, 1fr);
+  align-items: center;
+  gap: 10px;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_filtro ul li {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_filtro ul li:first-child {
+  grid-column: span 3;
+  display: flex;
+  align-items: center;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_filtro ul li:first-child div {
+  display: flex;
+  align-items: center;
+  background-color: var(--Branco);
+  border-radius: 5px;
+  padding: 5px;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_filtro ul li:first-child div input {
+  width: 100%;
+  color: var(--Black);
+  outline: none;
+  border: none;
+  font-family: var(--Fonte_Heebo);
+  font-size: 14px;
+  background-color: transparent;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_filtro ul li:first-child div svg {
+  width: 20px;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_filtro ul li p {
+  color: var(--Gray);
+  font-size: 14px;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_filtro ul li span {
+  font-size: 12px;
+  margin: 0;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_filtro ul li div.container_filtros {
+  width: calc(100% + 40px);
+  position: absolute;
+  background-color: var(--Branco);
+  padding: 20px;
+  top: 30px;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.623);
+  border-radius: 10px;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_filtro ul li div.container_filtros p:hover {
+  color: black;
+  cursor: pointer;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_produtos_dashboard {
+  width: 100%;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_produtos_dashboard div.produto_dashboard {
+  margin-top: 20px;
+  border-bottom: 1px solid #E9EAF3;
+  padding: 10px 0;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_produtos_dashboard div.produto_dashboard ul {
+  display: grid;
+  grid-template-columns: 1fr repeat(8, 1fr);
+  align-items: center;
+  gap: 10px;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_produtos_dashboard div.produto_dashboard ul li {
+  margin-left: -65px;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_produtos_dashboard div.produto_dashboard ul li:first-child {
+  grid-column: span 3;
+  margin-left: 0;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_produtos_dashboard div.produto_dashboard ul li:last-child {
+  display: flex;
+  gap: 10px;
+  margin: 0;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_produtos_dashboard div.produto_dashboard ul li div.container_img_produto_dashboard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_produtos_dashboard div.produto_dashboard ul li div.container_img_produto_dashboard div {
+  width: 44px;
+  height: 44px;
+  background-color: #F3F3F3;
+  border-radius: 50%;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_produtos_dashboard div.produto_dashboard ul li div.container_img_produto_dashboard div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_produtos_dashboard div.produto_dashboard ul li div.container_img_produto_dashboard P {
+  color: var(--DarkGray);
+}
+body main section.Paginas#Produtos div.container_dashboards article div.container_produtos_dashboard div.produto_dashboard ul li p {
+  width: 65%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-size: 14px;
+  color: var(--Gray);
+}
+
+@media screen and (max-width: 586px) {
+  div.container_dashboards {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+  }
+}/*# sourceMappingURL=Admin.css.map */

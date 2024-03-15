@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bazar | Login</title>
+    <link rel="stylesheet" href="Assets/Style/Geral.css">
+    <link rel="stylesheet" href="Assets/Style/Cadastro.css">
+</head>
+<body>
+    <div id="msg_top">
+        <p>Sempre Feliz em Servir :)</p>
+    </div>
+
+    <main>
+        <section>
+            <img src="Assets/Imgs/Others/mg_principal_cadastro.png" alt="Imagem principal da página">
+        </section>
+
+        <section id="container_form">
+            <article>
+                <h1>Fazer Login</h1>
+                <form id="form_Login" action="submit">
+                    <input type="email" placeholder="Email" id="input_email" required>
+                    <div>
+                        <input type="password" placeholder="Senha" id="input_senha" required>
+                        <img src="Assets/Imgs/Icons/visibility_off.png" alt="Icone ver senha" onclick="Ver_Senha()">
+                    </div>
+                    <button>Entrar Agora</button>
+                </form>
+                <p id="esqueci_senha" onclick="EnviarEsqueciSenha()">Esqui a senha</p>
+
+                <p>Não tem uma conta? <a href="Cadastro.html">Criar Agora</a></p>
+
+                <span>Ou</span>
+
+                <div id="outras_formas_de_cadastro">
+                    <button onclick="LoginViaGoogle()">
+                        <img src="Assets/Imgs/Icons/Google.png" alt="Icone do Google">
+                    </button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <!--? Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+    <script src="Assets/Js/Firebase.js"></script>
+
+    <!--? Meus Scripts -->
+    <script src="Assets/Js/Login.js"></script>
+    <script src="Assets/Js/Utils/Index.js"></script>
+</body>
+</html>
